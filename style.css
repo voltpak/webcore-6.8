@@ -54,6 +54,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 16px;
 }
 
 .burger__icon {
@@ -66,18 +67,6 @@ body {
     width: 96.55px;
     height: 50.81px;
     margin-left: 20px;
-}
-
-.repair__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 30px;
-}
-
-.search__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 20px;
 }
 
 .btn--text {
@@ -115,6 +104,7 @@ h2 {
 }
 
 .nav button {
+    white-space: nowrap;
     font-size: 16px;
     border: none;
     background-color: transparent;
@@ -166,9 +156,10 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
-.header-right__icons {
+.page-heading__icons {
     display: none;
 }
 
@@ -180,10 +171,10 @@ p {
     .nav {
         display: flex;
         max-width: 767px;
-        max-height: 40px;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
+        overflow-x: auto;
     }
     .pad__text {
         display: none;
@@ -212,18 +203,18 @@ p {
         justify-content: space-between;
     }
     
-    .body__container {
+    .content-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    .content-text {
+    .content-container__text {
         flex:1;
     }
     
-    .content-image {
+    .content-container__banner {
         flex:1;
         padding: 20px;
         text-align: right;
@@ -232,6 +223,7 @@ p {
     .header__divider--right {
         display: flex;
         justify-content: flex-end;
+        margin: 0px 16px;
     }
 
     .header__divider--left {
@@ -245,23 +237,24 @@ p {
     .header-mid {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
+        margin-left: auto;
+        gap: 16px;
     }
 }
 
 @media (min-width:1120px) {
-     .body__container {
+     .content-container {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
 
-    .content-text {
+    .content-container__text {
         flex:1;
     }
     
-    .content-image {
+    .content-container__banner {
         flex:1;
         padding: 20px;
         text-align: right;
@@ -275,7 +268,7 @@ p {
         display: none;
     }
 
-    .header-right__icons {
+    .page-heading__icons {
         display: flex;
         align-items: center;
     }
